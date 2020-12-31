@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Placeholder Images</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'site.css' %}">
+</head>
+<body>
+	<h1>Placeholder Images</h1>
+	<p>This service is for providing placeholder images for any web page. To request a placeholder of any given height and width simply include an image with the source pointing to <b>/placeholder/&lt;width;x&lt;height;</b> on this server as such:</p>
+	<pre>&lt;img src={{ example }} &gt;</pre>
+	<h2>Examples</h2>
+	<ul>
+		<li><img src="{% url 'placeholder' width=50 height=50 %}"></li>
+		<li><img src="{% url 'placeholder' width=100 height=50 %}"></li>
+		<li><img src="{% url 'placeholder' width=50 height=100 %}"></li>
+	</ul>
+</body>
+</html>
